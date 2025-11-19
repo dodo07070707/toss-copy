@@ -1,54 +1,33 @@
-import {
-  AppContainer,
-  Header,
-  LogoWrap,
-  Logo,
-  LogoText,
-  Nav,
-  NavItem,
-  MainBg,
-  MainWrapper,
-  ShoeMenuMain,
-  ShoeImageRow,
-} from "./styles/AppStyles.jsx";
+import "./styles/AppStyles.css";
 
 import Product from "./widgets/product.jsx";
 import data from "./data.js";
 import { useState } from "react";
+import Nav from "./nav.jsx";
 
-import bg from "../public/assets/bg.png";
+import bg from "../public/assets/main_background.png";
 import logo from "../public/assets/logo1.svg";
-import { Routes, Route, Link } from "react-router-dom";
 
 export default function App() {
   const [shoes] = useState(data);
 
   return (
-    <AppContainer>
-      <Header>
-        <LogoWrap href="/">
-          <Logo src={logo} />
-        </LogoWrap>
+    <div className="app-container">
+      <div className="header-temp">
+        <header className="header">
+          <a className="logo-wrap" href="/">
+            <img className="logo" src={logo} />
+          </a>
+          <Nav />
+        </header>
+      </div>
 
-        <Nav>
-          <Link to="/">
-            <NavItem>Home</NavItem>
-          </Link>
-          <Link to="/about">
-            <NavItem>About</NavItem>
-          </Link>
-          <Link to="/search">
-            <NavItem>Contact</NavItem>
-          </Link>
-        </Nav>
-      </Header>
+      <div className="main-bg" style={{ backgroundImage: `url(${bg})` }} />
 
-      <MainBg style={{ backgroundImage: `url(${bg})` }} />
+      <main className="main-wrapper">
+        <div className="shoe-menu-main">Products</div>
 
-      <MainWrapper>
-        <ShoeMenuMain>Products</ShoeMenuMain>
-
-        <ShoeImageRow>
+        <div className="shoe-image-row">
           {shoes.slice(0, 3).map((item, i) => (
             <Product
               key={i}
@@ -60,8 +39,8 @@ export default function App() {
               img={`https://codingapple1.github.io/shop/shoes${i + 1}.jpg`}
             />
           ))}
-        </ShoeImageRow>
-      </MainWrapper>
-    </AppContainer>
+        </div>
+      </main>
+    </div>
   );
 }

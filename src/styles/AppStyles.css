@@ -1,0 +1,120 @@
+a {
+  text-decoration-line: none;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: "Pretendard";
+}
+
+.header-temp {
+  position: fixed;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 310px 0px 94px;
+  height: 60px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  width: 110px;
+  height: auto;
+}
+
+.main-bg {
+  height: 900px;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-wrapper {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0px 40px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shoe-menu-main {
+  font-size: 30px;
+  font-family: "Paperlogy";
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.shoe-image-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-desc-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.nav-link {
+  font-size: 15px;
+  color: #6b7784;
+  letter-spacing: 0px;
+  padding: 9.4px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #f3f4f5;
+  color: #0056b3;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.nav-innermargin {
+  width: 40px;
+  height: 0px;
+}
+
+.nav-lang-on {
+  font-size: 15px;
+  color: #6b7784;
+  letter-spacing: 0px;
+  padding: 0px 17px;
+  transition: 0.3s;
+}
+
+.nav-lang-off {
+  font-size: 15px;
+  color: #b0b8c1;
+  letter-spacing: 0px;
+  padding: 0px 17px;
+  transition: 0.3s;
+}
+
+.nav-lang-split {
+  color: #b0b8c1;
+  font-size: 15px;
+}
