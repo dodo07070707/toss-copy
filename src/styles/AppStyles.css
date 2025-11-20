@@ -12,24 +12,24 @@ html {
   font-family: "Pretendard";
 }
 
-.header {
-  display: flex;
-  position: sticky;
-  top: 0;
-  width: 1058px;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  background-color: transparent;
-  margin-left: 280px;
-}
-
 .nav-wrapper-for-white {
   position: sticky;
   top: 0;
   height: 60px;
   background-color: white;
   width: 100%;
+  z-index: 100; /* 무조건맨위 */
+}
+
+.header {
+  display: flex;
+
+  width: 1058px;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: transparent;
+  margin-left: 280px;
 }
 
 .logo-wrap {
@@ -44,7 +44,7 @@ html {
 }
 
 .main-bg {
-  height: 900px;
+  height: 870px;
   background-size: cover;
   background-position: center -62px;
   position: relative;
@@ -203,6 +203,20 @@ html {
 .nav-lang-split {
   color: #b0b8c1;
   font-size: 15px;
+}
+
+.main0-wrapper {
+  width: 100%;
+  padding: 200px 0px;
+  background-color: rgba(249, 250, 251, 1);
+  border-radius: 8px;
+  display: flex;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.4;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .main-arrow-src {
