@@ -2,7 +2,7 @@ import "./styles/AppStyles.css";
 
 import Product from "./widgets/product.jsx";
 import data from "./data.js";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Nav from "./nav.jsx";
 
 import bg from "../public/assets/main_background.png";
@@ -11,9 +11,10 @@ import arrow from "../public/assets/arrow.svg";
 
 export default function App() {
   const [shoes] = useState(data);
-
-  const scrollDown = () => {
-    nextRef.current?.scrollIntoView({ behavior: "smooth" });
+  const main0Ref = useRef();
+  const onMoveToForm = () => {
+    console.log("fuck");
+    main0Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -52,11 +53,16 @@ export default function App() {
                 Google Play
               </div>
             </div>
-            <img src={arrow} className="main-arrow-src"></img>
+            <img
+              src={arrow}
+              className="main-arrow-src"
+              onClick={onMoveToForm}
+              style={{ cursor: "pointer" }}
+            ></img>
           </div>
         </div>
       </div>
-      <div className="main0-wrapper">
+      <div className="main0-wrapper" ref={main0Ref}>
         내 모든 금융 내역을 한눈에 조회하고 한 곳에서 관리하세요.
         <br />
         이제껏 경험 못 했던 쉽고 편리한 금융 서비스,
