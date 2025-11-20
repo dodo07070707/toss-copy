@@ -102,6 +102,77 @@ export default function App() {
           />
         </div>
       </div>
+      <footer className="footer">
+        <div className="footer-copname">(주)비바리퍼블리카</div>
+        <div className="footer-address">
+          사업자 등록번호 : 120-88-01280 | 대표 : 이승건
+          <br />
+          호스팅 서비스 : 주식회사 비바리퍼블리카 | 통신판매업 신고번호 :
+          2014-서울강남-03377 사업자정보확인
+          <br />
+          06236 서울특별시 강남구 테헤란로 142, 4층, 10층, 11층, 12층, 13층,
+          22층, 23층 (역삼동, 아크플레이스)
+          <br />
+          고객센터 : 서울특별시 강남구 테헤란로 133, 9층 (역삼동,한국타이어빌딩)
+        </div>
+        <div className="footer-term-wrapper-foralign">
+          <div className="footer-term-wrapper">
+            <div className="footer-term-wrapper-source">
+              서비스 이용약관
+              <br />
+              개인정보 처리방침
+              <br />
+              위치기반서비스 이용약관
+              <br />
+              금융소비자보호
+            </div>
+            <div className="footer-term-wrapper-source">
+              통합 금융정보 서비스 약관
+              <br />
+              채용팀 개인정보 처리방침
+              <br />
+              가맹점 고지사항
+              <br />
+              토스비즈니스 개인정보 처리방침
+            </div>
+            <div className="footer-term-wrapper-source">
+              마이데이터 서비스 이용약관
+              <br />
+              어드민 서비스 개인정보 처리방침
+              <br />
+              토스 전자서명인증업무준칙
+              <br />
+              퀵계좌이체 개인정보 처리방침
+            </div>
+            <div className="footer-term-wrapper-source">
+              이용자의 권리 및 유의사항
+              <br />
+              고정형 영상정보처리기기 운영 관리 방침
+              <br />
+              토스 전자인증서비스 약관
+              <br />
+            </div>
+          </div>
+        </div>
+        <div className="footer-icon-wrapper">
+          <img
+            className="footer-icon"
+            src="https://static.toss.im/assets/homepage/safety/icon-tossfeed.svg"
+          />
+          <img
+            className="footer-icon"
+            src="https://static.toss.im/assets/homepage/safety/icn-naver.svg"
+          />
+          <img
+            className="footer-icon"
+            src="https://static.toss.im/assets/homepage/safety/icon-x.svg"
+          />
+          <img
+            className="footer-icon"
+            src="https://static.toss.im/assets/homepage/safety/icn-instagram.svg"
+          />
+        </div>
+      </footer>
     </div>
   );
 }
