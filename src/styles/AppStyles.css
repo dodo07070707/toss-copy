@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.app-container::-webkit-scrollbar-track {
+  background: white;
+}
+
 .app-container {
   overflow: visible;
   min-height: 100vh;
@@ -218,6 +222,57 @@ html {
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+.report-area {
+  background-color: rgba(245, 246, 248);
+  padding: 33px 0px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.report-wrapper {
+  width: 736px;
+  margin: 0px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.report-left-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 240px;
+}
+.report-left-title {
+  font-size: 36px;
+  font-family: "Pretendard";
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333d4b;
+}
+.report-left-content {
+  font-size: 18px;
+  letter-spacing: 0.35;
+  font-family: "Pretendard";
+  line-height: 1.5;
+  font-weight: 300;
+  color: rgba(0, 19, 43, 0.58);
+  margin-bottom: 24px;
+}
+.report-left-button {
+  color: rgba(27, 100, 218);
+  background-color: #e9f3ff;
+  padding: 11px 16px;
+  width: fit-content;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.report-image {
+  width: 240px;
+  height: 240px;
 }
 
 .main-arrow-src {

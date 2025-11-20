@@ -13,7 +13,6 @@ export default function App() {
   const [shoes] = useState(data);
   const main0Ref = useRef();
   const onMoveToForm = () => {
-    console.log("fuck");
     main0Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -86,6 +85,23 @@ export default function App() {
           ))}
         </div>
       </main>
+      <div className="report-area">
+        <div className="report-wrapper">
+          <div className="report-left-wrapper">
+            <div className="report-left-title">비즈니스 고객 제보</div>
+            <div className="report-left-content">
+              토스팀과의 협업 중 불편을 느끼셨나요?
+              <br />
+              지금 바로 알려주세요.
+            </div>
+            <div className="report-left-button">접수하기</div>
+          </div>
+          <img
+            className="report-image"
+            src="https://static.toss.im/3d-emojis/u1F4C4-u26A0.png"
+          />
+        </div>
+      </div>
     </div>
   );
 }
