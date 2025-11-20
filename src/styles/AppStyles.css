@@ -2,24 +2,34 @@ a {
   text-decoration-line: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .app-container {
   min-height: 100vh;
   background-color: #ffffff;
   font-family: "Pretendard";
 }
 
-.header-temp {
-  position: fixed;
-}
-
 .header {
   display: flex;
-  position: relative;
-  width: 100%;
+  position: sticky;
+  top: 0;
+  width: 1058px;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 310px 0px 94px;
   height: 60px;
+  background-color: transparent;
+  margin-left: 280px;
+}
+
+.nav-wrapper-for-white {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  background-color: white;
+  width: 100%;
 }
 
 .logo-wrap {
@@ -36,7 +46,49 @@ a {
 .main-bg {
   height: 900px;
   background-size: cover;
-  background-position: center;
+  background-position: center -62px;
+  position: relative;
+}
+
+.main-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px; /* 그라데이션 범위 */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  height: 1080px;
+  pointer-events: none;
+  z-index: 3;
+  justify-content: start;
+  text-align: center;
+  align-items: center;
+}
+
+.main-content-text {
+  color: black;
+  font-family: "Prentendard";
+  font-size: 66px;
+  font-weight: 690;
+  margin-top: 114px;
+  margin-bottom: 46px;
+  line-height: 1.4;
+  letter-spacing: -0.9px;
 }
 
 .main-wrapper {
@@ -48,6 +100,40 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main-content-icons-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 374px;
+}
+
+.main-down-arrow {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content-icons-items {
+  padding: 11px 17px 11px 15px;
+  letter-spacing: 0.6px;
+  background-color: rgba(0, 12, 30, 0.8);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Pretendard";
+  font-weight: 500;
+}
+
+.main-link-image-between {
+  width: 4px;
+}
+
+.main-link-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
 }
 
 .shoe-menu-main {
@@ -82,7 +168,7 @@ a {
   font-size: 15px;
   color: #6b7784;
   letter-spacing: 0px;
-  padding: 9.4px;
+  padding: 9.2px;
   transition: 0.3s;
 }
 
@@ -117,4 +203,74 @@ a {
 .nav-lang-split {
   color: #b0b8c1;
   font-size: 15px;
+}
+
+.main-arrow-src {
+  color: black;
+  opacity: 0.3;
+  transform: translateX(-50%) rotate(270deg);
+  width: 50px;
+  height: 50px;
+  padding-top: 50px;
+
+  /* 애니메이션 적용 */
+  animation: bounce 3s infinite ease-in-out;
+}
+
+/* 위아래로 흔들리는 애니메이션 */
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(270deg);
+    opacity: 0%;
+  }
+  6.6% {
+    transform: translateX(-50%) translateY(-5px) rotate(270deg);
+    opacity: 15%;
+  }
+  13.3% {
+    transform: translateX(-50%) translateY(-10px) rotate(270deg);
+    opacity: 30%;
+  }
+  20% {
+    transform: translateX(-50%) translateY(-5px) rotate(270deg);
+  }
+  26.6% {
+    transform: translateX(-50%) translateY(0) rotate(270deg);
+  }
+  33.3% {
+    transform: translateX(-50%) translateY(5px) rotate(270deg);
+  }
+  40% {
+    transform: translateX(-50%) translateY(10px) rotate(270deg);
+  }
+  46.6% {
+    transform: translateX(-50%) translateY(5px) rotate(270deg);
+  }
+  53.3% {
+    transform: translateX(-50%) translateY(0) rotate(270deg);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px) rotate(270deg);
+  }
+  66.6% {
+    transform: translateX(-50%) translateY(-10px) rotate(270deg);
+  }
+  73.3% {
+    transform: translateX(-50%) translateY(-5px) rotate(270deg);
+  }
+  80% {
+    transform: translateX(-50%) translateY(0) rotate(270deg);
+  }
+  86.6% {
+    transform: translateX(-50%) translateY(5px) rotate(270deg);
+    opacity: 30%;
+  }
+  93.3% {
+    transform: translateX(-50%) translateY(10px) rotate(270deg);
+    opacity: 15%;
+  }
+  100% {
+    transform: translateX(-50%) translateY(5px) rotate(270deg);
+    opacity: 0%;
+  }
 }

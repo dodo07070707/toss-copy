@@ -7,13 +7,18 @@ import Nav from "./nav.jsx";
 
 import bg from "../public/assets/main_background.png";
 import logo from "../public/assets/logo1.svg";
+import arrow from "../public/assets/arrow.svg";
 
 export default function App() {
   const [shoes] = useState(data);
 
+  const scrollDown = () => {
+    nextRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="app-container">
-      <div className="header-temp">
+      <div className="nav-wrapper-for-white">
         <header className="header">
           <a className="logo-wrap" href="/">
             <img className="logo" src={logo} />
@@ -22,7 +27,35 @@ export default function App() {
         </header>
       </div>
 
-      <div className="main-bg" style={{ backgroundImage: `url(${bg})` }} />
+      <div className="main-bg-items">
+        <div className="main-bg" style={{ backgroundImage: `url(${bg})` }}>
+          <div className="main-content-wrapper">
+            <div className="main-content-text">
+              금융의 모든 것
+              <br />
+              토스에서 쉽고 간편하게
+            </div>
+            <div className="main-content-icons-wrapper">
+              <div className="main-content-icons-items">
+                <img
+                  className="main-link-image"
+                  src="https://static.toss.im/png-icons/timeline/applekorea.png"
+                ></img>
+                App Store
+              </div>
+              <div className="main-link-image-between" />
+              <div className="main-content-icons-items">
+                <img
+                  className="main-link-image"
+                  src="https://static.toss.im/png-icons/timeline/googleplay.png"
+                ></img>
+                Google Play
+              </div>
+            </div>
+            <img src={arrow} className="main-arrow-src"></img>
+          </div>
+        </div>
+      </div>
 
       <main className="main-wrapper">
         <div className="shoe-menu-main">Products</div>
