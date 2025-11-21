@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import NavDetail from "./NavDetail";
-import "./styles/AppStyles.css";
+import NavDetail from "../NavDetail";
+import "../styles/AppStyles.css";
 
 export default function Nav() {
   return (
