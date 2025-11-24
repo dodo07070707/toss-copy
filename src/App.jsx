@@ -70,7 +70,7 @@ export default function App() {
           {screenSize === "mobile" ? (
             <ProductMobile />
           ) : screenSize === "tablet" ? (
-            <ProductDesktop />
+            <ProductMobile />
           ) : (
             <ProductDesktop />
           )}

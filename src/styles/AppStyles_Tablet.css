@@ -3,7 +3,7 @@
 /*    Only for Header */
 /* -------------------------------------------------- */
 
-@media all and (max-width: 840px) {
+@media (min-width: 480px) and (max-width: 840px) {
   a {
     text-decoration-line: none;
   }
@@ -207,6 +207,11 @@
     margin: 0px 0px;
   }
 
+  .product-page-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .single-image {
     display: flex;
     align-items: center;
@@ -215,11 +220,11 @@
   }
 
   .product-img {
-    width: 80%;
+    width: 300px;
+    height: auto;
   }
 
   .product-title {
-    margin-top: 12px;
     margin-bottom: 4px;
     font-size: 22px;
     font-weight: 700;
@@ -235,7 +240,7 @@
 
   .shoe-image-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 20px;
     margin-bottom: 20px;
   }

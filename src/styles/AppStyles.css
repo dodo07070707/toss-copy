@@ -159,10 +159,14 @@ a {
 }
 
 .shoe-image-row {
+  margin: 50px 100px;
+}
+
+.product-page-wrapper {
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  width: 800px;
 }
 
 .nav-wrapper {
@@ -372,7 +376,7 @@ a {
 }
 
 .product-img {
-  width: 80%;
+  width: 230px;
 }
 
 .product-title {
@@ -380,10 +384,11 @@ a {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.2px;
+  margin-bottom: 0px;
 }
 
 .product-content {
-  margin-top: 8px;
+  margin-top: 12px;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.8px;

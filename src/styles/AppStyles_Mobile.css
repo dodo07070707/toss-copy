@@ -199,6 +199,11 @@
     height: 60%;
   }
 
+  .product-page-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .shoe-menu-main {
     font-size: 30px;
     font-family: "Paperlogy";
@@ -214,11 +219,11 @@
   }
 
   .product-img {
-    width: 80%;
+    width: 300px;
+    height: auto;
   }
 
   .product-title {
-    margin-top: 12px;
     margin-bottom: 4px;
     font-size: 22px;
     font-weight: 700;
@@ -234,7 +239,7 @@
 
   .shoe-image-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 20px;
     margin-bottom: 20px;
   }
