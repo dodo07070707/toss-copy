@@ -4,7 +4,7 @@
 
 **Subject**  
 Toss 홈페이지 카피 프로젝트 (Mobile, Pc, Tablet Interactive) / UI ONLY  
-**PM, Designer, Developer**  
+**Developer**  
 김도윤    
 **Used Stack**  
 React, Vite
