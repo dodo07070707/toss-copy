@@ -41,7 +41,6 @@
     align-items: center;
     height: 60px;
     background-color: transparent;
-    margin-left: 4px;
   }
 
   .header-right-wrapper {
@@ -210,6 +209,7 @@
   .product-page-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .single-image {

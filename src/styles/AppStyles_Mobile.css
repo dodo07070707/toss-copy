@@ -40,7 +40,6 @@
     align-items: center;
     height: 60px;
     background-color: transparent;
-    margin-left: 4px;
   }
 
   .header-right-wrapper {
@@ -199,9 +198,14 @@
     height: 60%;
   }
 
+  .shoe-image-row {
+    width: 100%;
+  }
+
   .product-page-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .shoe-menu-main {
