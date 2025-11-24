@@ -1,8 +1,18 @@
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+.body {
+  width: 100%;
+  max-width: 100%;
+}
+
 a {
   text-decoration-line: none;
 }
 
-html {
+.html {
   scroll-behavior: smooth;
 }
 
@@ -27,14 +37,12 @@ html {
 }
 
 .header {
+  width: 100%;
   display: flex;
-
-  width: 1058px;
   justify-content: space-between;
   align-items: center;
   height: 60px;
   background-color: transparent;
-  margin-left: 280px;
 }
 
 .logo-wrap {
@@ -175,6 +183,9 @@ html {
   letter-spacing: 0px;
   padding: 9.2px;
   transition: 0.3s;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  overflow: hidden; /* 넘치는 글자 숨김 */
+  text-overflow: ellipsis; /* ... 표시 */
 }
 
 .nav-link:hover {
@@ -351,6 +362,30 @@ html {
   flex-direction: row;
   align-items: start;
   width: 930px;
+}
+
+.single-image {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-img {
+  width: 80%;
+}
+
+.product-title {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.product-content {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
 }
 
 /* 위아래로 흔들리는 애니메이션 */

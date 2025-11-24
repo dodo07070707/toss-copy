@@ -1,7 +1,7 @@
 import "./styles/AppStyles.css";
 
-import Product from "./widgets/product.jsx";
-import data from "./data.js";
+import ProductDesktop from "./widgets/Product_Desktop.jsx";
+import ProductMobile from "./widgets/Product_Mobile.jsx";
 import { useState, useRef, useEffect } from "react";
 
 import bg from "../public/assets/main_background.png";
@@ -10,25 +10,27 @@ import arrow from "../public/assets/arrow.svg";
 
 import HeaderDesktop from "./widgets/Header_Desktop.jsx";
 import HeaderMobile from "./widgets/Header_Mobile.jsx";
+import HeaderTablet from "./widgets/Header_tablet.jsx";
 import MainMobile from "./widgets/Main_Mobile.jsx";
 import MainDesktop from "./widgets/Main_Desktop.jsx";
 
 export default function App() {
-  const [shoes] = useState(data);
   const main0Ref = useRef();
 
   /* 모바일 호환 */
-  const [isMobile, setIsMobile] = useState(false);
+  const [screenSize, setScreenSize] = useState("desktop");
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 480px)");
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 480) setScreenSize("mobile");
+      else if (width <= 840) setScreenSize("tablet");
+      else setScreenSize("desktop");
+    };
 
-    setIsMobile(mediaQuery.matches);
-
-    const handleChange = () => setIsMobile(mediaQuery.matches);
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => mediaQuery.removeEventListener("change", handleChange);
+    handleResize(); // 초기값
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   /* scroll */
@@ -38,12 +40,22 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {isMobile ? <HeaderMobile logo={logo} /> : <HeaderDesktop logo={logo} />}
-      {isMobile ? (
+      {screenSize === "mobile" ? (
+        <HeaderMobile logo={logo} />
+      ) : screenSize === "tablet" ? (
+        <HeaderTablet logo={logo} />
+      ) : (
+        <HeaderDesktop logo={logo} />
+      )}
+
+      {screenSize === "mobile" ? (
         <MainMobile bg={bg} arrow={arrow} onMoveToForm={onMoveToForm} />
+      ) : screenSize === "tablet" ? (
+        <MainDesktop bg={bg} arrow={arrow} onMoveToForm={onMoveToForm} />
       ) : (
         <MainDesktop bg={bg} arrow={arrow} onMoveToForm={onMoveToForm} />
       )}
+
       <div className="main0-wrapper" ref={main0Ref}>
         내 모든 금융 내역을 한눈에 조회하고 한 곳에서 관리하세요.
         <br />
@@ -55,17 +67,13 @@ export default function App() {
         <div className="shoe-menu-main">Products</div>
 
         <div className="shoe-image-row">
-          {shoes.slice(0, 3).map((item, i) => (
-            <Product
-              key={i}
-              title={item.title}
-              price={
-                item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
-                "₩"
-              }
-              img={`https://codingapple1.github.io/shop/shoes${i + 1}.jpg`}
-            />
-          ))}
+          {screenSize === "mobile" ? (
+            <ProductMobile />
+          ) : screenSize === "tablet" ? (
+            <ProductDesktop />
+          ) : (
+            <ProductDesktop />
+          )}
         </div>
       </main>
       <div className="report-area">

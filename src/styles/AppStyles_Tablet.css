@@ -1,8 +1,9 @@
 /* -------------------------------------------------- */
-/* 📱 Mobile Version (max-width: 480px) */
+/* Mobile Version (max-width: 840px) */
+/*    Only for Header */
 /* -------------------------------------------------- */
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 840px) {
   a {
     text-decoration-line: none;
   }
