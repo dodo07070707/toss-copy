@@ -17,18 +17,18 @@ import MainDesktop from "./widgets/Main_Desktop.jsx";
 export default function App() {
   const main0Ref = useRef();
 
-  /* 모바일 호환 */
-  const [screenSize, setScreenSize] = useState("desktop");
+  /* 모바일 */
+  const getScreenSize = () => {
+    const width = window.innerWidth;
+    if (width < 480) return "mobile";
+    if (width <= 840) return "tablet";
+    return "desktop";
+  };
+
+  const [screenSize, setScreenSize] = useState(getScreenSize());
 
   useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      if (width < 480) setScreenSize("mobile");
-      else if (width <= 840) setScreenSize("tablet");
-      else setScreenSize("desktop");
-    };
-
-    handleResize(); // 초기값
+    const handleResize = () => setScreenSize(getScreenSize());
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
