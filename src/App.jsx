@@ -20,8 +20,8 @@ export default function App() {
   /* 모바일 */
   const getScreenSize = () => {
     const width = window.innerWidth;
-    if (width < 480) return "mobile";
-    if (width <= 840) return "tablet";
+    if (width <= 480) return "mobile";
+    if (480 < width && width <= 840) return "tablet";
     return "desktop";
   };
 

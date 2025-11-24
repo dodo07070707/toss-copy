@@ -82,7 +82,7 @@
   .main-bg {
     height: 870px;
     background-size: cover;
-    background-position: center -62px;
+    background-position: center center;
     z-index: 1;
     position: relative;
   }
